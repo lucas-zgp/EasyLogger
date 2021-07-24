@@ -1,7 +1,7 @@
 /*
  * This file is part of the EasyLogger Library.
  *
- * Copyright (c) 2015, Armink, <armink.ztl@gmail.com>
+ * Copyright (c) 2015-2019, Qintl, <qintl_linux@163.com>
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -22,94 +22,49 @@
  * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
- * Function: Portable interface for each platform.
- * Created on: 2015-04-28
+ * Function:  Portable interface for EasyLogger's file log pulgin.
+ * Created on: 2019-01-05
  */
- 
-#include <elog.h>
+
+#include "elog_file.h"
 
 /**
- * EasyLogger port initialize
+ * EasyLogger flile log pulgin port initialize
  *
  * @return result
  */
-ElogErrCode elog_port_init(void) {
+ElogErrCode elog_file_port_init(void)
+{
     ElogErrCode result = ELOG_NO_ERR;
 
     /* add your code here */
-    
+
     return result;
 }
 
 /**
- * EasyLogger port deinitialize
- *
+ * file log lock
  */
-void elog_port_deinit(void) {
+void elog_file_port_lock(void) {
 
     /* add your code here */
 
 }
 
 /**
- * output log port interface
- *
- * @param log output of log
- * @param size log size
+ * file log unlock
  */
-void elog_port_output(const char *log, size_t size) {
-    
+void elog_file_port_unlock(void) {
+
     /* add your code here */
-    
+
 }
 
 /**
- * output lock
+ * file log deinit
  */
-void elog_port_output_lock(void) {
-    
-    /* add your code here */
-    
-}
+void elog_file_port_deinit(void) {
 
-/**
- * output unlock
- */
-void elog_port_output_unlock(void) {
-    
     /* add your code here */
-    
-}
 
-/**
- * get current time interface
- *
- * @return current time
- */
-const char *elog_port_get_time(void) {
-    
-    /* add your code here */
-    
-}
-
-/**
- * get current process name interface
- *
- * @return current process name
- */
-const char *elog_port_get_p_info(void) {
-    
-    /* add your code here */
-    
-}
-
-/**
- * get current thread name interface
- *
- * @return current thread name
- */
-const char *elog_port_get_t_info(void) {
-    
-    /* add your code here */
-    
 }
